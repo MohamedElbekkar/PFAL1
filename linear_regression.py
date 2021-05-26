@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import xlwings as xw
+import numpy as np
 import os
 import sys
 
@@ -11,8 +12,6 @@ if os.path.exists(fn):
 else:
     print("ERROR WRONG PATH") #If the path is wrong, the program is closed.
     quit()
-
-
 
 #This part is made to import the data from excel to python
 data = pd.read_excel(sys.argv[1]) #reads the data in the excel given path
@@ -47,32 +46,31 @@ plt.title("The plot of the dataset")
 plt.savefig("Scatterplot_01.png")
 plt.show()
 
+#turning lists into arrays to make it easy to manipulate
+list_price_array=np.array(list_price)
+list_km_array=np.array(list_km)
 
 
+def gradient_descent(x,y,iterations,learning_rate):
+    m_curr = b_curr = 0
+    n = len(x)
+    for i in range(iterations):   
+        y_predicted = m_curr * x + b_curr 
+        cost = (1/(2*n)) * sum([val**2 for val in (y_predicted - y)]) 
+        md = (1/n)*sum(x*(y_predicted - y)) 
+        bd = (1/n)*sum(y_predicted - y)
+        m_curr = m_curr - learning_rate * md
+        b_curr = b_curr - learning_rate * bd
+    print ("m {}, b {}, cost {} iteration {} md {} bd {}".format(m_curr,b_curr,cost, i, md , bd))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#This test function is created to find the best learningRate,iterations number 
+def test(x,y):
+    iterationsList=[5,10,50,100,500,1000,5000,10000,20000,50000]
+    rateList=[0.055,0.005, 0.0001, 0.0001]
+    for i in range(len(rateList)):
+        for j in range(len(iterationsList)):
+            print("--------------------------------")
+            print("THIS IS TEST NUMBER {}th, ITERATIONS NUMBERS : {} LEARNING RATE : {} ".format(i,iterationsList[j], rateList[i]))
+            gradient_descent(x,y,iterationsList[j], rateList[i])
+            
+test(list_km_array,list_price_array)

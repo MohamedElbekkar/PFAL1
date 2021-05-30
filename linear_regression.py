@@ -5,10 +5,10 @@ import numpy as np
 import os
 import sys
 
-#This part is dedicated to the command line insertion of the path
+#This part is dedicated to the command line insertion of the paths
 fn = sys.argv[1]
 if os.path.exists(fn):
-    print(os.path.exists(fn))
+    print("Abracadabra")
 else:
     print("ERROR WRONG PATH") #If the path is wrong, the program is closed.
     quit()
@@ -24,10 +24,6 @@ list_price=data_price.values.tolist() #creates a list of the mileage data
 list_km=data_km.values.tolist()  #creates a list of the prices 
 LengthData=len(list_km)
 
-
-#This part is made to import the data from python to excel
-wb = xw.Book(sys.argv[1]) #The xw library helps us to edit the excel file while the program runs
-DataSetToUpdate = wb.sheets["data"] #chooses the table
 
 #turns the 2 dimensions unuseful lists to a one dimension list
 for i in range(0,LengthData):
@@ -46,31 +42,34 @@ plt.title("The plot of the dataset")
 plt.savefig("Scatterplot_01.png")
 plt.show()
 
-#turning lists into arrays to make it easy to manipulate
-list_price_array=np.array(list_price)
-list_km_array=np.array(list_km)
-
-
 def gradient_descent(x,y,iterations,learning_rate):
-    m_curr = b_curr = 0
+    #turning lists into arrays to make it easy to manipulate
+    list_price_array_reducted=(1/10)*np.array(list_price) # y 
+    list_km_array_reducted=(1/10000)*np.array(list_km)   # x
+    m_curr = 0
+    b_curr = 0
     n = len(x)
     for i in range(iterations):   
-        y_predicted = m_curr * x + b_curr 
+        y_predicted = m_curr * list_km_array_reducted + b_curr 
         cost = (1/(2*n)) * sum([val**2 for val in (y_predicted - y)]) 
-        md = (1/n)*sum(x*(y_predicted - y)) 
-        bd = (1/n)*sum(y_predicted - y)
+        md = (1/n)*sum(list_km_array_reducted*(y_predicted - list_price_array_reducted)) 
+        bd = (1/n)*sum(y_predicted - list_price_array_reducted)
         m_curr = m_curr - learning_rate * md
         b_curr = b_curr - learning_rate * bd
     print ("m {}, b {}, cost {} iteration {} md {} bd {}".format(m_curr,b_curr,cost, i, md , bd))
+    m_curr=(1/1000)*m_curr
+    b_curr=10*b_curr
+    L=[x[i]*m_curr+ b_curr for i in range(len(x))]
+    plt.scatter(x,y) 
+    plt.xlabel("Mileage Of A car")
+    plt.ylabel("Price Of A car")
+    plt.title("The plot of the dataset")
+    plt.savefig("Scatterplot_01.png")
+    plt.plot(x,L, color='red' )
+    plt.show()
+    
+    
+gradient_descent(list_km,list_price,100000,0.001)
+quit()
 
-#This test function is created to find the best learningRate,iterations number 
-def test(x,y):
-    iterationsList=[5,10,50,100,500,1000,5000,10000,20000,50000]
-    rateList=[0.055,0.005, 0.0001, 0.0001]
-    for i in range(len(rateList)):
-        for j in range(len(iterationsList)):
-            print("--------------------------------")
-            print("THIS IS TEST NUMBER {}th, ITERATIONS NUMBERS : {} LEARNING RATE : {} ".format(i,iterationsList[j], rateList[i]))
-            gradient_descent(x,y,iterationsList[j], rateList[i])
-            
-test(list_km_array,list_price_array)
+    

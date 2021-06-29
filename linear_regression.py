@@ -142,9 +142,9 @@ else:
     gradient_descent(list_km,list_price,100000,0.001)
 
 answer1=input("Do you want to estimate the price of a car?\n")
-if answer1 in ["yes","Yes","YES","y","oui","ah","Ah"]:
+if answer1 in ["yes","Yes","YES","y","oui","ah","Ah", 1, "TRUE", "true", "sure"]:
     os.system('python estimate_price.py')
 else:
-    print("Thanks for your ")
+    print("Thanks for using this program. Your variables theta0 and tetha1 are saved in the myVariables.txt file and you can use them whenever you want to estimate or just run estimate_price.py program")
     quit()
 quit()

@@ -143,7 +143,7 @@ else:
 
 answer1=input("Do you want to estimate the price of a car?\n")
 if answer1 in ["yes","Yes","YES","y","oui","ah","Ah"]:
-    os.system('python tkinter_estimate_nopic.py')
+    os.system('python estimate_price.py')
 else:
     print("Thanks for your ")
     quit()

@@ -1,5 +1,5 @@
 # PFAL1
-                                                                         LINEAR REGRESSION 
+                                                                        LINEAR REGRESSION 
                                                                       
 This is my first year project in the Data Science Bachelor at Mohamed 6 Polytechnic University. The project is an introduction to the machine learning alrgorithms in which
 I was asked to find the regression line that suits my dataset in order to be able to estimate the price of a car for a given mileage.
@@ -27,5 +27,5 @@ surfing on the stackoverflow website.
 
 Last but not least, I really thank my team mate Marouane SAKAI with whom I worked on this project as well as my supervisor Noureddine Hamid that helped and guided in this journey.
 
------------------------------------------------------------------------------About the programs-----------------------------------------------------------------------------
+                                                              About the programs
 

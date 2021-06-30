@@ -2,9 +2,9 @@
                                                                    LINEAR REGRESSION 
                                                                       
 This is my first year project in the Data Science Bachelor at Mohamed 6 Polytechnic University. The project is an introduction to the machine learning alrgorithms in which
-I was asked to find the regression line that suits my dataset in order to be able to estimate the price of a car for a given mileage.
+I was asked to find the regression line that suits my dataset in order to estimate the price of a car for a given mileage.
 
-In this project, I mainly used the gradient descent algorithm that helps you find the local minimum of a function. Finding the minimum means finding the best line.
+In this project, I mainly used the gradient descent algorithm that helps you find the local minimum of a function. Finding the minimum means finding the best  regression line.
 In other words, it means that once you hit the minimum of the cost function (by training) then you actually found the best line so that the error is optimized which means 
 that the difference between the actual price (of the training dataset) and the estimated price(given from our line) is the smallest. 
 By that you'll be finding the variables(a and b) of your line ax+b and you'll be able to estimate new prices of different mileages.

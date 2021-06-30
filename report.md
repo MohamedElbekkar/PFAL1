@@ -1,7 +1,7 @@
 # PFAL1
                                                                    LINEAR REGRESSION 
                                                                       
-This is my first year project in the Data Science Bachelor at Mohamed 6 Polytechnic University. The project is an introduction to the machine learning alrgorithms in which
+This is my first year [project](https://bit.ly/3h452Kv) in the Data Science Bachelor at Mohamed 6 Polytechnic University. The project is an introduction to the machine learning alrgorithms in which
 I was asked to find the regression line that suits my dataset in order to estimate the price of a car for a given mileage.
 
 In this project, I mainly used the gradient descent algorithm that helps you find the local minimum of a function. Finding the minimum means finding the best  regression line.
@@ -25,7 +25,17 @@ difficulties concerning the overflow of my algorithm caused by the huge numbers 
 At the end I decided to write different verions of my program by applying the different solutions that I found after reading various articles, watching videos and of course
 surfing on the stackoverflow website.
 
-Last but not least, I really thank my team mate Marouane SAKAI with whom I worked on this project as well as my supervisor Noureddine Hamid that helped and guided in this journey.
+Last but not least, I really thank my team mate Marouane SAKAI with whom I worked on this project as well as my supervisor Noureddine Hamid and Nouredine Ouhaddou that helped and guided me in this journey.
 
-                                                              About the programs
+                                                                      About the programs
 
+Language: Python
+
+Structure: Two programs and a text file. The first program contains the gradient descent algorithm that finds the slope and the intercept of my linear function. At the end the 
+program saves the two variables in the text file that can be used later to estimate new prices. The second program is for estimating, it contains the tkinter program that displays the window where you're supposed to enter the mileage of the carthen click to find the estimated price.
+
+The repository contains two versions:
+
+- First one has a normalization of the type min/max in order to visualize the dataCloud/Linear Regression but the actual slope and intercept (used for estimating) are actually calculated in a normal way using a trick we found (at least it's working for our dataset) in order to reduce the numbers so we can avoid the overflow. However, the trick was actually to multiply by a 10^(-4)/10^(-1) and then after finding the slope/intercept multiply it by 10^(-3)/10 (This trick was actually used before discovering the normalization). The other program in the two versions is slightly similar (The one used to estimate).
+
+- The second one has a normalization of the type log/exp fully used to calculate the slope and the intercept by using the gradient descent and with the actually calculated paramerters we estimate. This time the estimting program takes a mileage x but uses log(x) and then returns exp(result). 

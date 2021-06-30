@@ -16,11 +16,11 @@ different learning rates and different numbers of iterations.
 
 This project helped me get used to numpy arrays as well as the matplotlib library in order to visualize the data cloud and the regression line in different ways. I also tried 
 to visualize the 3D cost function. Moreover, I got used to excel tables and its manipulation in Python using pandas.
-In addition, I've worked on a programm that estimates the price of a given mileage using pickle and the tkinter library that allows you to use popups,windows and buttons 
+In addition, I've worked on a program that estimates the price of a given mileage using pickle and the tkinter library that allows you to use popups,windows and buttons 
 for a better interactive experience.
 
 This project seemed easy at the begining but I did my best to fully understand every thing I type in my code so I can benefit from it as much as possible . I faced some
-difficulties concerning the overflow of my alorgithm caused by the huge numbers of my dataset that made me discover the normalization and standardization and its different types.
+difficulties concerning the overflow of my algorithm caused by the huge numbers of my dataset that made me discover the normalization and standardization and its different types.
 
 At the end I decided to write different verions of my program by applying the different solutions that I found after reading various articles, watching videos and of course
 surfing on the stackoverflow website.

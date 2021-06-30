@@ -1,7 +1,7 @@
 # PFAL1
-                                                                      LINEAR REGRESSION 
+                                                                         LINEAR REGRESSION 
                                                                       
-This is my first year project in the Data Science Bachelor at Mohamed 6 Polytechnic University. The project is an introduction to the machine learning alrgorithms. 
+This is my first year project in the Data Science Bachelor at Mohamed 6 Polytechnic University. The project is an introduction to the machine learning alrgorithms in which
 I was asked to find the regression line that suits my dataset in order to be able to estimate the price of a car for a given mileage.
 
 In this project, I mainly used the gradient descent algorithm that helps you find the local minimum of a function. Finding the minimum means finding the best line.
@@ -10,7 +10,7 @@ that the difference between the actual price (of the training dataset) and the e
 By that you'll be finding the variables(a and b) of your line ax+b and you'll be able to estimate new prices of different mileages.
 
 More importantly, the gradient descent has some important parameters that are not given by default and that should actually be tested in order to find them
-which are the learning rate as well as the number of iterations. Learning rate is the how big or small your alogirthm will be scaling your function and number of iterations are 
+which are the learning rate as well as the number of iterations. Learning rate is the how big or small your alogirthm will be scaling your function and number of iterations is 
 the number of times your alorgithm will loop to learn. Both of these parameters are very important and can be found using a test function that keeps trying 
 different learning rates and different numbers of iterations.
 

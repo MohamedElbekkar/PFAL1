@@ -21,12 +21,14 @@ root.resizable(0, 0)
 
 def getEstimatePrice ():  
     mileage = entry1.get()
+ 	  result = m_curr*float(mileage) + b_curr
+ 	  if result < 0 :
+ 		      result = 0 #Because the price can't be negative 
+   label1 = tk.Label(root, text= result)
+   canvas1.create_window(200, 230, window=label1)
  
-    label1 = tk.Label(root, text= m_curr*float(mileage) + b_curr)
-    canvas1.create_window(200, 230, window=label1)
  
- 
-button1 = tk.Button(text='Get estimate price', command=getEstimatePrice)
+button1 = tk.Button(text='Get the estimated price', command=getEstimatePrice)
 canvas1.create_window(200, 180, window=button1)
  
 root.mainloop()

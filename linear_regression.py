@@ -104,7 +104,7 @@ def gradient_descent_undernorm(x,y,iterations,learning_rate):
         bd = (1/n)*sum(y_predicted - list_price_array_reducted)
         m_curr = m_curr - learning_rate * md
         b_curr = b_curr - learning_rate * bd
-    print ("m {}, b {}, cost {} iteration {} md {} bd {}".format(m_curr,b_curr,cost, i, md , bd))
+    #print ("m {}, b {}, cost {} iteration {} md {} bd {}".format(m_curr,b_curr,cost, i, md , bd))
     m_curr=(1/1000)*m_curr
     b_curr=10*b_curr
     f = open('myVariables.txt', 'wb')

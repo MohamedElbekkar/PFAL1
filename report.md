@@ -14,7 +14,7 @@ which are the learning rate as well as the number of iterations. Learning rate i
 the number of times your alorgithm will loop to learn. Both of these parameters are very important and can be found using a test function that keeps trying 
 different learning rates and different numbers of iterations.
 
-This project helped me get used to numpy arrays as well as the matplotlib library in order to visualize the data cloud and the regression line in different ways. I also tried 
+This project helped me get used to numpy arrays as well as the matplotlib library that helped me to visualize the data cloud and the regression line in different ways. I also tried 
 to visualize the 3D cost function. Moreover, I got used to excel tables and its manipulation in Python using pandas.
 In addition, I've worked on a program that estimates the price of a given mileage using pickle and the tkinter library that allows you to use popups,windows and buttons 
 for a better interactive experience.

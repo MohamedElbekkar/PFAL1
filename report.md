@@ -36,11 +36,15 @@ Libraries: Matplotlib, Numpy, Pandas, Tkinter, Pickle
 Structure: Two programs and a text file. The first program contains the gradient descent algorithm that finds the slope and the intercept of my linear function. At the end the 
 program saves the two variables in the text file that can be used later to estimate new prices. The second program is for estimating, it contains the tkinter program that displays the window where you're supposed to enter the mileage of the car and then click to find the estimated price.
 
-- linear_regression.py :
-Ran in terminal/command line using this format:  ** python linear_regression.py [Location of the .xlsx dataset] [Type of normalization: "Normalized" / "Not Normalized"] **
-(Be sure to close the data cloud when shown so the calculations start)
+### How to run : 
 
--
+###### linear_regression.py :
+Ran in terminal using this format:  python linear_regression.py _Location of the .xlsx dataset_  Type of normalization: _"Normalized"_ / _"Not Normalized"_
+Be sure to close the data cloud when shown so the calculations start
+
+###### estimating.py :
+ran in the terminal using : python estimating.py 
+or simply after running the linear_regression.py, you can answer by yes for the question: "Do you want to estimate a price?"
 
 
 The repository contains two versions:
